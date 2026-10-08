@@ -31,3 +31,6 @@ jobs:
 
       - name: Build application
         run: npm run build
+
+      - name: Build Docker image
+        run: docker build -f dockerfile -t react-vite-app:${{ github.sha }} .
